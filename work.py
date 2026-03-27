@@ -5,15 +5,18 @@ pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
 
 
-for x in range (1,500):
+for x in range (1,809):
     print(data[x]["name"])
 
 user = input("Language?")
 
-for x in range (1,500):
+for x in range (1,809):
     if user == "japanese":
         print(data[x]["name"]["japanese"])
     elif user == "english":
         print(data[x]["name"]["english"])
     else:
         print(data[x]["name"]["fench"])
+
+for i in range():
+     
