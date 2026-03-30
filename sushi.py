@@ -14,6 +14,13 @@ sushi_orders = [
 def reciept(orders):
     reciept = {}
     for order in orders:
-        if order ['name'] in reciept:
-            print("good")
+        if order['name'] in reciept:
+            print("okay")
+        else:
+            reciept[order['name']] = {
+                "price": order ['price'],
+                "quantity": 1
+                if "quantity"
+            }
+    print(reciept)
 reciept(sushi_orders)
