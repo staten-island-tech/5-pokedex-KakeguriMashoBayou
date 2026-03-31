@@ -24,3 +24,4 @@ def reciept(orders):
     for sushi, value in the_receipt.items():
         price = value['price'] * value['qty']
         print(sushi, value['qty'], price)
+        
