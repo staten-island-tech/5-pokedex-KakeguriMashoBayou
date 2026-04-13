@@ -19,4 +19,6 @@ for x in range (1,809):
         print(data[x]["name"]["fench"])
 
 for i in range():
-     
+
+person= input(the_types:)
+the_types={"fighting","psychic","poison","dragon","ghost","dark","ground","fire","fairy","water","flying","normal","rock","electric","bug","grass","ice","steel"}
