@@ -5,24 +5,21 @@ pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
 
 
-for x in range (0,809):
+for x in range(0,809):
     print(data[x]["name"])
+person = input("Language? Japanese, English, Chinese or French: ").lower()
 
-user = input("Language?")
+for x in range(0,809):
+    print(data[x]["name"][person])
 
-for x in range (0,809):
-    if user == "japanese":
-        print(data[x]["name"]["japanese"])
-    elif user == "english":
-        print(data[x]["name"]["english"])
-    else:
-        print(data[x]["name"]["french"])
-
+located = False
 person = ("select your type:")
 for pokemon in data:
-  if person in pokemon["type"]:
+    if person in pokemon["type"]:
         print(pokemon["type"]["english"])
         located = True
-  else: located = False
 if located == False:
     print("found nothing")
+
+count = 0 
+name = input("Name Match")  
