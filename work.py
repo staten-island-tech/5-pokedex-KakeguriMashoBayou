@@ -3,23 +3,27 @@ import json
 pokedex = open("./pokedex.json", encoding="utf8")
 ## create variable "data" that represents the enitre pokedex list
 data = json.load(pokedex)
+moves=open("./moves.json", encoding="utf8")
+data_2= json.load(moves)
 
 
-for x in range(0,809):
+'''for x in range(0,809):
     print(data[x]["name"])
 person = input("Language? Japanese, English, Chinese or French: ").lower()
 
 for x in range(0,809):
-    print(data[x]["name"][person])
-
+    print(data[x]["name"][person])'''
+data=type
 located = False
-person = ("select your type:")
 for pokemon in data:
-    if person in pokemon["type"]:
+    if pokemon in pokedex["type"]:
         print(pokemon["type"]["english"])
         located = True
-if located == False:
+if not located:
     print("found nothing")
 
+'''name = input("Name Match: ")
 count = 0 
-name = input("Name Match")  
+for char in data:
+    if name in char["name"]["english"]:
+        print(char["name"]["english"])'''
