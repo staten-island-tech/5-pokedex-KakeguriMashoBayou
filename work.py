@@ -31,4 +31,9 @@ for char in data:
 if count == 0:
     print("No pokemon goes by that")
 
-abilities = input("what moves are you looking for?: ")
+abilities = input("The moves of the pokemon: ")  
+for item in data:
+    if abilities in item["name"]["english"]:
+        for moves in data_2:
+            if moves["type"] in item["type"]:
+                print(moves["ename"])
